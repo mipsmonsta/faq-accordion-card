@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
 :root {
     --card--bg: white;
     --soft-violet: hsl(273, 75%, 66%);
     --soft-blue: hsl(240, 73%, 65%);
+    --divider-color: hsl(240, 5%, 91%);
 
+    --ff-text: font-family: 'Kumbh Sans', sans-serif;
 }
 
 * {
@@ -16,6 +20,7 @@ html {
 }
 
 .card {
+    font-family: 'Kumbh Sans', sans-serif;
     width: 100vw;
     height: 100vh;
     background: linear-gradient(to bottom, var(--soft-violet), var(--soft-blue));
@@ -25,8 +30,8 @@ html {
 }
 
 .container {
-    width: 600px;
-    height: min-content;
+    min-width: 700px;
+    min-height: 500px;
     background-color: white;
     display: flex;
     justify-content: center;
@@ -36,43 +41,99 @@ html {
 
 }
 
+/***************layout pictures***********************/
+
 .picture {
     width: 300px;
     height: 300px;
     position: relative;
-    background: url(./images/illustration-woman-online-desktop.svg);
+}
+
+.picture__bg {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 50%;
+    transform: translateY(-40%);
+    left: -10%;
+}
+
+.picture__mid {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-image: url(./images/illustration-woman-online-desktop.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    left: -5%
+    top: 50%;
+    transform: translateY(-50%);
+    left: -10%;
 }
 
-.picture img {
+.picture__fore {
     position: absolute;
     width: 200px;
-    height: auto;
+    height: 200px;
+    background-image: url(./images/illustration-box-desktop.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     top: 50%;
-    left: -20%;
     transform: translateY(-30%);
+    left: -32%;
 }
 
+
+/***************layout Q&As***********************/
 .faq {
-    width: 300px;
-    height: min-content;
+    width: min-content;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-inline: 5rem;
+}
+
+.faq__title {
+    margin-bottom: 1rem;
+}
+
+
+.faq__qa {
+    width: 400px;
+    margin: 0.5rem 0 0.5rem 0;
+    border-bottom: 1px solid var(--divider-color);
 }
 
 .question {
     cursor: pointer;
+    line-height: 2rem;
+    white-space:nowrap; /*no text wrapping to set width*/
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 1.2rem;
+}
+
+.question.active {
+    font-weight: bold;
 }
 
 .question__btn {
     transform-origin: 50% 50%;
+    margin-left: 2rem;
 }
 
 .answer {
     background-color: white;
     display: none;
     overflow: hidden;
+    line-height: 2rem;
+    white-space: wrap;
 }
 
 

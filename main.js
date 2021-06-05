@@ -6,7 +6,7 @@ for (i = 0; i < questions.length; i++) {
     this.classList.toggle("active");
 
     let answer = this.nextElementSibling;
-    let imgElement = this.firstElementChild;
+    let imgElement = this.lastElementChild;
     if (answer.style.display == "block") {
       answer.style.display = "none";
     } else {
