@@ -18,6 +18,8 @@
 
 html {
     font-size: 62.5%;
+    overflow: scroll;
+
 }
 
 .card {
@@ -38,8 +40,6 @@ html {
     justify-content: center;
     align-items: center;
     border-radius: 4rem 4rem;
-
-
 }
 
 /***************layout pictures***********************/
@@ -145,8 +145,46 @@ html {
     white-space: wrap;
 }
 
+/************media query************************/
+
+@media screen and (max-width: 800px) {
+    .container {
+        flex-direction: column;
+        min-width: fit-content;
+        min-height: min-content;
+    }
+    .picture {
+        margin-top: -30%;
+    }
+
+    .picture__bg {
+        top: 0;
+        left: 0;
+        transform: translateY(0);
+
+    }
+    
+    .picture__mid {
+        top: 0;
+        left: 0;
+        transform: translateY(0);
+
+    }
+    
+    .picture__fore {
+        top: 50%;
+        left: 50%;
+        transform: translateX(-100%);
+    }
+
+    .faq {
+        height: 500px;
+    }
+}
+
 
 .attribution {
+padding-top: 2rem;
   font-size: 11px;
   text-align: center;
 }
