@@ -161,7 +161,7 @@ body {
 
     .container {
         flex-direction: column;
-        min-width: max-content;
+        min-width: 600px;
         min-height: min-content;
     }
     .picture {
