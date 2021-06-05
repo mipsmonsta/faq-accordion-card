@@ -36,8 +36,8 @@ body {
 }
 
 .container {
-    min-width: min-content;
-    min-height: 600px;
+    width: 900px;
+    height: 600px;
     /*must be longer than faq height due to margin */
     background-color: white;
     display: flex;
@@ -111,7 +111,6 @@ body {
 }
 
 .faq__qa {
-    width: 400px;
     height: 100px;
     border-bottom: 1px solid var(--divider-color);
     font-size: 1.3rem;
@@ -163,9 +162,11 @@ body {
 @media screen and (max-width: 800px) {
     .card {
         width: 720px;
-        min-height: 1280px;
+        height: 1280px;
     }
     .container {
+        width: 350px;
+        height: 900px;
         flex-direction: column;
         align-items: center;
     }
@@ -174,17 +175,34 @@ body {
     }
     .picture__bg {
         background-image: url(./images/bg-pattern-mobile.svg);
-        transform: translateX(5%) translateY(5%);
+        transform: translateX(5%);
 
     }
     .picture__mid {
         background-image: url(./images/illustration-woman-online-mobile.svg);
+        top: -10%;
+        transform: translateX(5%);
     }
+
     .picture__fore {
         display: none;
     }
+
     .faq {
-        height: 500px;
+        width: 200px;
+        height: fit-content;
+    }
+
+    .faq__qa {
+        height: 120px;
+    }
+
+    .question {
+        font-size: 1rem;
+    }
+
+    .answer {
+        font-size: 1rem;
     }
 }
 
