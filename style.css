@@ -163,6 +163,7 @@ body {
 
     .container {
         flex-direction: column;
+        align-items: center;
     }
     .picture {
         margin-top: -30%;
