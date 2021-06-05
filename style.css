@@ -32,7 +32,7 @@ html {
 
 .container {
     min-width: 700px;
-    min-height: 500px;
+    min-height: 500px; /*must be longer than faq height due to margin */
     background-color: white;
     display: flex;
     justify-content: center;
@@ -92,7 +92,7 @@ html {
 /***************layout Q&As***********************/
 .faq {
     width: min-content;
-    height: 400px;
+    height: 400px; /*enough height for full expansion of accordion so no layout shift */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -101,6 +101,7 @@ html {
 
 .faq__title {
     margin-bottom: 1rem;
+    font-size: bold;
 }
 
 
