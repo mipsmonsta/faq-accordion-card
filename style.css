@@ -32,7 +32,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: scroll;
+    overflow: visible;
 
 }
 
@@ -153,6 +153,12 @@ body {
 /************media query************************/
 
 @media screen and (max-width: 800px) {
+
+    .card {
+        width: 900px;
+        height: min-content;
+    }
+
     .container {
         flex-direction: column;
         min-width: fit-content;
