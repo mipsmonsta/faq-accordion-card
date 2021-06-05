@@ -37,7 +37,7 @@ body {
 }
 
 .container {
-    min-width: fit-content;
+    min-width: 830px;
     min-height: 500px; /*must be longer than faq height due to margin */
     background-color: white;
     display: flex;
