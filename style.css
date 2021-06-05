@@ -5,6 +5,7 @@
     --soft-violet: hsl(273, 75%, 66%);
     --soft-blue: hsl(240, 73%, 65%);
     --divider-color: hsl(240, 5%, 91%);
+    --question-hover: hsl(14, 88%, 65%);
 
     --ff-text: font-family: 'Kumbh Sans', sans-serif;
 }
@@ -104,9 +105,11 @@ html {
 
 
 .faq__qa {
-    width: 400px;
-    margin: 0.5rem 0 0.5rem 0;
+    width: 430px;
+    margin-bottom: 1.5rem;
     border-bottom: 1px solid var(--divider-color);
+    font-size: 1.3rem;
+
 }
 
 .question {
@@ -116,11 +119,15 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    font-size: 1.2rem;
+    margin: 0.7rem 0 0.7rem 0;
 }
 
 .question.active {
     font-weight: bold;
+}
+
+.question:hover {
+    color: var(--question-hover);
 }
 
 .question__btn {
@@ -129,6 +136,7 @@ html {
 }
 
 .answer {
+    font-size: 1.1rem;
     background-color: white;
     display: none;
     overflow: hidden;
