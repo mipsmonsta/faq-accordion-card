@@ -190,7 +190,9 @@ body {
     }
 
     .faq {
+        width: min-content;
         height: 500px;
+
     }
 }
 
