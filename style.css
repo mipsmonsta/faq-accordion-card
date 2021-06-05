@@ -32,7 +32,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: visible;
+    overflow: scroll;
 
 }
 
@@ -44,7 +44,7 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 4rem 4rem;
-
+    overflow: visible;
 }
 
 /***************layout pictures***********************/
