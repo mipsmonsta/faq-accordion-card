@@ -1,44 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
-
 :root {
     --card--bg: white;
     --soft-violet: hsl(273, 75%, 66%);
     --soft-blue: hsl(240, 73%, 65%);
     --divider-color: hsl(240, 5%, 91%);
     --question-hover: hsl(14, 88%, 65%);
-
+    --question-text: hsl(238, 29%, 16%);
+    --answer-text: hsl(240, 6%, 50%);
     --ff-text: font-family: 'Kumbh Sans', sans-serif;
 }
 
 * {
-    box-sizing: border-box;
+    box-sizing:border-box;
     margin: 0;
     padding: 0;
 }
 
 html {
     font-size: 62.5%;
-
 }
+
 body {
     overflow: scroll;
 }
 
 .card {
     font-family: 'Kumbh Sans', sans-serif;
-    width: 1920px;
-    height: 1080px;
+    width: 1440px;
+    height: 810px;
     background: linear-gradient(to bottom, var(--soft-violet), var(--soft-blue));
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: visible;
-
 }
 
 .container {
     min-width: min-content;
-    min-height: 500px; /*must be longer than faq height due to margin */
+    min-height: 600px;
+    /*must be longer than faq height due to margin */
     background-color: white;
     display: flex;
     justify-content: center;
@@ -50,15 +50,15 @@ body {
 /***************layout pictures***********************/
 
 .picture {
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     position: relative;
 }
 
 .picture__bg {
     position: absolute;
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     background-image: url(./images/bg-pattern-desktop.svg);
     background-size: contain;
     background-repeat: no-repeat;
@@ -69,8 +69,8 @@ body {
 
 .picture__mid {
     position: absolute;
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     background-image: url(./images/illustration-woman-online-desktop.svg);
     background-size: contain;
     background-repeat: no-repeat;
@@ -93,15 +93,16 @@ body {
     left: -32%;
 }
 
-
 /***************layout Q&As***********************/
+
 .faq {
-    width: 530px;
-    height: 400px; /*enough height for full expansion of accordion so no layout shift */
+    width: 400px;
+    height: fit-content;
+    /*enough height for full expansion of accordion so no layout shift */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding-inline: 5rem;
+    margin-inline: 5rem;
 }
 
 .faq__title {
@@ -109,32 +110,38 @@ body {
     font-size: bold;
 }
 
-
 .faq__qa {
-    width: 430px;
-    margin-bottom: 1.5rem;
+    width: 400px;
+    height: 100px;
     border-bottom: 1px solid var(--divider-color);
     font-size: 1.3rem;
-
 }
 
 .question {
+    color: var(--question-text);
+    font-size: 1.5rem;
     cursor: pointer;
     line-height: 2rem;
-    white-space:nowrap; /*no text wrapping to set width*/
+    white-space: nowrap;
+    /*no text wrapping to set width*/
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin: 0.7rem 0 0.7rem 0;
-}
-
-.question.active {
-    font-weight: bold;
+    transition: 0.4s;
 }
 
 .question:hover {
     color: var(--question-hover);
+    transition: 0.4s;
 }
+
+.question.active {
+    color: var(--question-text);
+    font-weight: bold;
+    transition: 0.4s;
+}
+
 
 .question__btn {
     transform-origin: 50% 50%;
@@ -142,25 +149,22 @@ body {
 }
 
 .answer {
-    font-size: 1.1rem;
-    background-color: white;
+    color: var(--answer-text);
+    font-size: 1.5rem;
     display: none;
     overflow: hidden;
     line-height: 2rem;
     white-space: wrap;
 }
 
+
 /************media query************************/
 
 @media screen and (max-width: 800px) {
-
-
-
     .card {
-        width: 1080px;
-        min-height: 1920px;
+        width: 720px;
+        min-height: 1280px;
     }
-
     .container {
         flex-direction: column;
         align-items: center;
@@ -168,40 +172,28 @@ body {
     .picture {
         margin-top: -30%;
     }
-
     .picture__bg {
-        top: 0;
-        left: 0;
-        transform: translateY(0);
+        background-image: url(./images/bg-pattern-mobile.svg);
+        transform: translateX(5%) translateY(5%);
 
     }
-    
     .picture__mid {
-        top: 0;
-        left: 0;
-        transform: translateY(0);
-
+        background-image: url(./images/illustration-woman-online-mobile.svg);
     }
-    
     .picture__fore {
-        top: 50%;
-        left: 50%;
-        transform: translateX(-100%);
+        display: none;
     }
-
     .faq {
-        width: min-content;
         height: 500px;
-
     }
 }
-
 
 .attribution {
-  font-size: 11px;
-  text-align: center;
-  padding-top: 2rem;
+    font-size: 11px;
+    text-align: center;
+    padding-top: 2rem;
 }
+
 .attribution a {
-  color: hsl(228, 45%, 44%);
+    color: hsl(228, 45%, 44%);
 }
