@@ -37,7 +37,7 @@ body {
 }
 
 .container {
-    min-width: 830px;
+    min-width: min-content;
     min-height: 500px; /*must be longer than faq height due to margin */
     background-color: white;
     display: flex;
@@ -96,7 +96,7 @@ body {
 
 /***************layout Q&As***********************/
 .faq {
-    width: min-content;
+    width: 530px;
     height: 400px; /*enough height for full expansion of accordion so no layout shift */
     display: flex;
     flex-direction: column;
