@@ -1,8 +1,10 @@
 let questions = document.getElementsByClassName("question");
+console.log(questions)
 
 let i;
 for (i = 0; i < questions.length; i++) {
   questions[i].addEventListener("click", function () {
+    console.log(this);
     this.classList.toggle("active");
 
     let answer = this.nextElementSibling;
